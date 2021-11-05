@@ -1,5 +1,5 @@
 #!/bin/busybox ash
-set -euo pipefail
+set -eo pipefail
 
 function config() {
 	echo "no-resolv"
@@ -8,7 +8,7 @@ function config() {
 	echo "no-dhcp-interface="
 	echo "user=dnsmasq"
 	echo "group=dnsmasq"
-	echo "cache=10000"
+	echo "cache-size=10000"
 	for server in $DNS_SERVERS; do
 		echo "server=$server"
 	done
