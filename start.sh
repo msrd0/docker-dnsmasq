@@ -8,6 +8,7 @@ function config() {
 	echo "no-dhcp-interface="
 	echo "user=dnsmasq"
 	echo "group=dnsmasq"
+	echo "cache=10000"
 	for server in $DNS_SERVERS; do
 		echo "server=$server"
 	done
